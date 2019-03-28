@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E7E7BC86224CB3970079470E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7BC85224CB3970079470E /* AppDelegate.swift */; };
+		E7E7BC88224CB3970079470E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7BC87224CB3970079470E /* ViewController.swift */; };
+		E7E7BC8B224CB3970079470E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7E7BC89224CB3970079470E /* Main.storyboard */; };
+		E7E7BC8D224CB3980079470E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7E7BC8C224CB3980079470E /* Assets.xcassets */; };
+		E7E7BC90224CB3980079470E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7E7BC8E224CB3980079470E /* LaunchScreen.storyboard */; };
+		E7E7BC9B224CB3980079470E /* LittleGPUImageDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7BC9A224CB3980079470E /* LittleGPUImageDemoTests.swift */; };
+		E7E7BCA6224CB3980079470E /* LittleGPUImageDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7BCA5224CB3980079470E /* LittleGPUImageDemoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E7E7BC97224CB3980079470E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7E7BC7A224CB3970079470E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7E7BC81224CB3970079470E;
+			remoteInfo = LittleGPUImageDemo;
+		};
+		E7E7BCA2224CB3980079470E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7E7BC7A224CB3970079470E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7E7BC81224CB3970079470E;
+			remoteInfo = LittleGPUImageDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E7E7BC82224CB3970079470E /* LittleGPUImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleGPUImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7E7BC85224CB3970079470E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E7E7BC87224CB3970079470E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E7E7BC8A224CB3970079470E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E7E7BC8C224CB3980079470E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E7E7BC8F224CB3980079470E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E7E7BC91224CB3980079470E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7E7BC96224CB3980079470E /* LittleGPUImageDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LittleGPUImageDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7E7BC9A224CB3980079470E /* LittleGPUImageDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleGPUImageDemoTests.swift; sourceTree = "<group>"; };
+		E7E7BC9C224CB3980079470E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7E7BCA1224CB3980079470E /* LittleGPUImageDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LittleGPUImageDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7E7BCA5224CB3980079470E /* LittleGPUImageDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleGPUImageDemoUITests.swift; sourceTree = "<group>"; };
+		E7E7BCA7224CB3980079470E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7E7BC7F224CB3970079470E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7E7BC93224CB3980079470E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7E7BC9E224CB3980079470E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E7E7BC79224CB3970079470E = {
+			isa = PBXGroup;
+			children = (
+				E7E7BC84224CB3970079470E /* LittleGPUImageDemo */,
+				E7E7BC99224CB3980079470E /* LittleGPUImageDemoTests */,
+				E7E7BCA4224CB3980079470E /* LittleGPUImageDemoUITests */,
+				E7E7BC83224CB3970079470E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E7E7BC83224CB3970079470E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7E7BC82224CB3970079470E /* LittleGPUImageDemo.app */,
+				E7E7BC96224CB3980079470E /* LittleGPUImageDemoTests.xctest */,
+				E7E7BCA1224CB3980079470E /* LittleGPUImageDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7E7BC84224CB3970079470E /* LittleGPUImageDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E7E7BC85224CB3970079470E /* AppDelegate.swift */,
+				E7E7BC87224CB3970079470E /* ViewController.swift */,
+				E7E7BC89224CB3970079470E /* Main.storyboard */,
+				E7E7BC8C224CB3980079470E /* Assets.xcassets */,
+				E7E7BC8E224CB3980079470E /* LaunchScreen.storyboard */,
+				E7E7BC91224CB3980079470E /* Info.plist */,
+			);
+			path = LittleGPUImageDemo;
+			sourceTree = "<group>";
+		};
+		E7E7BC99224CB3980079470E /* LittleGPUImageDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				E7E7BC9A224CB3980079470E /* LittleGPUImageDemoTests.swift */,
+				E7E7BC9C224CB3980079470E /* Info.plist */,
+			);
+			path = LittleGPUImageDemoTests;
+			sourceTree = "<group>";
+		};
+		E7E7BCA4224CB3980079470E /* LittleGPUImageDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E7E7BCA5224CB3980079470E /* LittleGPUImageDemoUITests.swift */,
+				E7E7BCA7224CB3980079470E /* Info.plist */,
+			);
+			path = LittleGPUImageDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E7E7BC81224CB3970079470E /* LittleGPUImageDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7E7BCAA224CB3980079470E /* Build configuration list for PBXNativeTarget "LittleGPUImageDemo" */;
+			buildPhases = (
+				E7E7BC7E224CB3970079470E /* Sources */,
+				E7E7BC7F224CB3970079470E /* Frameworks */,
+				E7E7BC80224CB3970079470E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LittleGPUImageDemo;
+			productName = LittleGPUImageDemo;
+			productReference = E7E7BC82224CB3970079470E /* LittleGPUImageDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E7E7BC95224CB3980079470E /* LittleGPUImageDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7E7BCAD224CB3980079470E /* Build configuration list for PBXNativeTarget "LittleGPUImageDemoTests" */;
+			buildPhases = (
+				E7E7BC92224CB3980079470E /* Sources */,
+				E7E7BC93224CB3980079470E /* Frameworks */,
+				E7E7BC94224CB3980079470E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7E7BC98224CB3980079470E /* PBXTargetDependency */,
+			);
+			name = LittleGPUImageDemoTests;
+			productName = LittleGPUImageDemoTests;
+			productReference = E7E7BC96224CB3980079470E /* LittleGPUImageDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E7E7BCA0224CB3980079470E /* LittleGPUImageDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7E7BCB0224CB3980079470E /* Build configuration list for PBXNativeTarget "LittleGPUImageDemoUITests" */;
+			buildPhases = (
+				E7E7BC9D224CB3980079470E /* Sources */,
+				E7E7BC9E224CB3980079470E /* Frameworks */,
+				E7E7BC9F224CB3980079470E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7E7BCA3224CB3980079470E /* PBXTargetDependency */,
+			);
+			name = LittleGPUImageDemoUITests;
+			productName = LittleGPUImageDemoUITests;
+			productReference = E7E7BCA1224CB3980079470E /* LittleGPUImageDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7E7BC7A224CB3970079470E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Personal;
+				TargetAttributes = {
+					E7E7BC81224CB3970079470E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					E7E7BC95224CB3980079470E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = E7E7BC81224CB3970079470E;
+					};
+					E7E7BCA0224CB3980079470E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = E7E7BC81224CB3970079470E;
+					};
+				};
+			};
+			buildConfigurationList = E7E7BC7D224CB3970079470E /* Build configuration list for PBXProject "LittleGPUImageDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E7E7BC79224CB3970079470E;
+			productRefGroup = E7E7BC83224CB3970079470E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7E7BC81224CB3970079470E /* LittleGPUImageDemo */,
+				E7E7BC95224CB3980079470E /* LittleGPUImageDemoTests */,
+				E7E7BCA0224CB3980079470E /* LittleGPUImageDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7E7BC80224CB3970079470E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7E7BC90224CB3980079470E /* LaunchScreen.storyboard in Resources */,
+				E7E7BC8D224CB3980079470E /* Assets.xcassets in Resources */,
+				E7E7BC8B224CB3970079470E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7E7BC94224CB3980079470E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7E7BC9F224CB3980079470E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7E7BC7E224CB3970079470E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7E7BC88224CB3970079470E /* ViewController.swift in Sources */,
+				E7E7BC86224CB3970079470E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7E7BC92224CB3980079470E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7E7BC9B224CB3980079470E /* LittleGPUImageDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7E7BC9D224CB3980079470E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7E7BCA6224CB3980079470E /* LittleGPUImageDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E7E7BC98224CB3980079470E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7E7BC81224CB3970079470E /* LittleGPUImageDemo */;
+			targetProxy = E7E7BC97224CB3980079470E /* PBXContainerItemProxy */;
+		};
+		E7E7BCA3224CB3980079470E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7E7BC81224CB3970079470E /* LittleGPUImageDemo */;
+			targetProxy = E7E7BCA2224CB3980079470E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E7E7BC89224CB3970079470E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7E7BC8A224CB3970079470E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E7E7BC8E224CB3980079470E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7E7BC8F224CB3980079470E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E7E7BCA8224CB3980079470E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E7E7BCA9224CB3980079470E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7E7BCAB224CB3980079470E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89LAKJ7LBL;
+				INFOPLIST_FILE = LittleGPUImageDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.lgf.LittleGPUImageDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7E7BCAC224CB3980079470E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89LAKJ7LBL;
+				INFOPLIST_FILE = LittleGPUImageDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.lgf.LittleGPUImageDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E7E7BCAE224CB3980079470E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LittleGPUImageDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.lgf.LittleGPUImageDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LittleGPUImageDemo.app/LittleGPUImageDemo";
+			};
+			name = Debug;
+		};
+		E7E7BCAF224CB3980079470E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LittleGPUImageDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.lgf.LittleGPUImageDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LittleGPUImageDemo.app/LittleGPUImageDemo";
+			};
+			name = Release;
+		};
+		E7E7BCB1224CB3980079470E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LittleGPUImageDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.lgf.LittleGPUImageDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LittleGPUImageDemo;
+			};
+			name = Debug;
+		};
+		E7E7BCB2224CB3980079470E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LittleGPUImageDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.lgf.LittleGPUImageDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LittleGPUImageDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7E7BC7D224CB3970079470E /* Build configuration list for PBXProject "LittleGPUImageDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7E7BCA8224CB3980079470E /* Debug */,
+				E7E7BCA9224CB3980079470E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7E7BCAA224CB3980079470E /* Build configuration list for PBXNativeTarget "LittleGPUImageDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7E7BCAB224CB3980079470E /* Debug */,
+				E7E7BCAC224CB3980079470E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7E7BCAD224CB3980079470E /* Build configuration list for PBXNativeTarget "LittleGPUImageDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7E7BCAE224CB3980079470E /* Debug */,
+				E7E7BCAF224CB3980079470E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7E7BCB0224CB3980079470E /* Build configuration list for PBXNativeTarget "LittleGPUImageDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7E7BCB1224CB3980079470E /* Debug */,
+				E7E7BCB2224CB3980079470E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E7E7BC7A224CB3970079470E /* Project object */;
+}
