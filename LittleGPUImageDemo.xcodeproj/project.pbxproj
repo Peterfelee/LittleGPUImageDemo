@@ -51,6 +51,7 @@
 		E7E7BCFB224CC0340079470E /* glossy_20170928.png in Resources */ = {isa = PBXBuildFile; fileRef = E7E7BCDA224CC0340079470E /* glossy_20170928.png */; };
 		E7E7BCFC224CC0340079470E /* lookup_miss_etikate.png in Resources */ = {isa = PBXBuildFile; fileRef = E7E7BCDB224CC0340079470E /* lookup_miss_etikate.png */; };
 		E7E7BCFD224CC0340079470E /* xiaosenlin_20170928_2.png in Resources */ = {isa = PBXBuildFile; fileRef = E7E7BCDC224CC0340079470E /* xiaosenlin_20170928_2.png */; };
+		E7E7BCFF224CC8A20079470E /* LGFCaremViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7BCFE224CC8A20079470E /* LGFCaremViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		E7E7BCDA224CC0340079470E /* glossy_20170928.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glossy_20170928.png; sourceTree = "<group>"; };
 		E7E7BCDB224CC0340079470E /* lookup_miss_etikate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_miss_etikate.png; sourceTree = "<group>"; };
 		E7E7BCDC224CC0340079470E /* xiaosenlin_20170928_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xiaosenlin_20170928_2.png; sourceTree = "<group>"; };
+		E7E7BCFE224CC8A20079470E /* LGFCaremViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGFCaremViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				E7E7BC87224CB3970079470E /* LGFViewController.swift */,
 				E7E7BCB3224CBB2B0079470E /* LGFNavgationViewController.swift */,
 				E7E7BCB5224CBB520079470E /* LGFTestViewController.swift */,
+				E7E7BCFE224CC8A20079470E /* LGFCaremViewController.swift */,
 				E7E7BC8C224CB3980079470E /* Assets.xcassets */,
 				E7E7BCBB224CC0340079470E /* Colors */,
 				E7E7BC8E224CB3980079470E /* LaunchScreen.storyboard */,
@@ -484,6 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7E7BC88224CB3970079470E /* LGFViewController.swift in Sources */,
+				E7E7BCFF224CC8A20079470E /* LGFCaremViewController.swift in Sources */,
 				E7E7BCB4224CBB2B0079470E /* LGFNavgationViewController.swift in Sources */,
 				E7E7BCB6224CBB520079470E /* LGFTestViewController.swift in Sources */,
 				E7E7BC86224CB3970079470E /* AppDelegate.swift in Sources */,

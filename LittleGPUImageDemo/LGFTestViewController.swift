@@ -18,6 +18,7 @@ class LGFTestViewController: UIViewController {
     var miss:MissEtikateFilter = MissEtikateFilter()
     var toon:ToonFilter = ToonFilter()
     var input:PictureInput!
+    var temp:PictureInput!
     var output:PictureOutput!
     var dissolve:DissolveBlend = DissolveBlend()
     override func viewDidLoad() {
@@ -26,7 +27,6 @@ class LGFTestViewController: UIViewController {
         title = "滤镜合成效果"
         // Do any additional setup after loading the view.
         addViews()
-        setupFilter()
     }
     
     private func addViews()
@@ -51,23 +51,30 @@ class LGFTestViewController: UIViewController {
         slider.addTarget(self, action: #selector(valueChange(slider:)), for: .valueChanged)
         self.view.addSubview(slider)
         
+        
+        let sel = #selector(nextButtonClick)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "next", style: .plain, target: self, action: sel)
+        
     }
-    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        setupFilter()
+    }
     private func setupFilter()
     {
         input = PictureInput(image: testImage)
         output = PictureOutput()
         output.keepImageAroundForSynchronousCapture  = true
         output.onlyCaptureNextFrame = true
-        let temp = PictureInput(imageName: "splash.png")
+        temp = PictureInput(imageName: "splash.png")
         input --> dissolve  -->/* miss -->*/ miss --> output
         temp --> dissolve
-        temp.processImage(synchronously: true)
         processImage()
     }
     
     private func processImage()
     {
+        temp.processImage(synchronously: false)
         input.processImage(synchronously: false)
         showView.layer.contents = output.synchronousImageCapture().cgImage
     }
@@ -112,6 +119,11 @@ extension LGFTestViewController:UIImagePickerControllerDelegate,UINavigationCont
         toon.threshold = Float(slider.value)
         dissolve.mix = Float(slider.value)
         processImage()
+    }
+    
+    @objc private func nextButtonClick()
+    {
+        self.navigationController?.pushViewController(LGFCaremViewController(), animated: true)
     }
 
 }

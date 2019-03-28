@@ -134,7 +134,6 @@ extension LGFViewController:UIImagePickerControllerDelegate,UINavigationControll
     
        @objc private func sliderValue(_ sender: UISlider) {
         lookupFilter.intensity = Float(sender.value)
-        //        bilateralblur.distanceNormalizationFactor = Float(sender.value)*10
         picture.processImage(synchronously: true)
     }
     
