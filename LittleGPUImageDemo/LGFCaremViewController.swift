@@ -37,10 +37,11 @@ class LGFCaremViewController: UIViewController {
         
         renderView.frame  = view.bounds
         view.addSubview(renderView)
-        cameraView = try? Camera.init(sessionPreset: AVCaptureSession.Preset.high, cameraDevice: nil, location: PhysicalCameraLocation.frontFacing, captureAsYUV: true)
+        cameraView = try? Camera.init(sessionPreset: AVCaptureSession.Preset.low, cameraDevice: nil, location: PhysicalCameraLocation.frontFacing, captureAsYUV: true)
         cameraView --> soft --> renderView
         
         cameraView.startCapture()
+        cameraView.delegate = self
         
         // Do any additional setup after loading the view.
     }
@@ -121,5 +122,13 @@ extension LGFCaremViewController{
         }
         return nil
     }
+    
+}
+
+extension LGFCaremViewController:CameraDelegate{
+    func didCaptureBuffer(_ sampleBuffer: CMSampleBuffer) {
+        
+    }
+    
     
 }

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LittleGPUImageDemo/LGFCaremViewController.swift"
-            timestampString = "575468104.208354"
+            timestampString = "575472494.765805"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "swtichCamera()"
             landmarkType = "7">
          </BreakpointContent>

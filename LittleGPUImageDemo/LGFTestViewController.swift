@@ -66,7 +66,7 @@ class LGFTestViewController: UIViewController {
         output = PictureOutput()
         output.keepImageAroundForSynchronousCapture  = true
         output.onlyCaptureNextFrame = true
-        temp = PictureInput(imageName: "splash.png")
+        temp = PictureInput(imageName: "clean_20170807.png")
         input --> dissolve  -->/* miss -->*/ miss --> output
         temp --> dissolve
         processImage()
