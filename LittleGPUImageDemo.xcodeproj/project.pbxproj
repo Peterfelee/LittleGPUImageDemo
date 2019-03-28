@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55BAB9E002736A1E9E888E7B /* Pods_LittleGPUImageDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC489679126F468E2A502FB /* Pods_LittleGPUImageDemoUITests.framework */; };
-		777B61FE9CBF56D0981436D2 /* Pods_LittleGPUImageDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 125AA69036132742DFBD105F /* Pods_LittleGPUImageDemoTests.framework */; };
 		A5AFB5A7CA908BE5E2EA1917 /* Pods_LittleGPUImageDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3472763EA7CFEEA42AC3D2E /* Pods_LittleGPUImageDemo.framework */; };
 		E7E7BC86224CB3970079470E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7BC85224CB3970079470E /* AppDelegate.swift */; };
 		E7E7BC88224CB3970079470E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7BC87224CB3970079470E /* ViewController.swift */; };
@@ -39,12 +37,8 @@
 /* Begin PBXFileReference section */
 		0217EB69138611F5EFF69BD3 /* Pods-LittleGPUImageDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleGPUImageDemo.debug.xcconfig"; path = "Target Support Files/Pods-LittleGPUImageDemo/Pods-LittleGPUImageDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		125AA69036132742DFBD105F /* Pods_LittleGPUImageDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittleGPUImageDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FE4142541B15D71C3C1E2F0 /* Pods-LittleGPUImageDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleGPUImageDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-LittleGPUImageDemoUITests/Pods-LittleGPUImageDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2310C1D31AC5F3ED2C53963D /* Pods-LittleGPUImageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleGPUImageDemo.release.xcconfig"; path = "Target Support Files/Pods-LittleGPUImageDemo/Pods-LittleGPUImageDemo.release.xcconfig"; sourceTree = "<group>"; };
 		2FC489679126F468E2A502FB /* Pods_LittleGPUImageDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittleGPUImageDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4ADFC1E3D9A02FF753B124C4 /* Pods-LittleGPUImageDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleGPUImageDemoTests.release.xcconfig"; path = "Target Support Files/Pods-LittleGPUImageDemoTests/Pods-LittleGPUImageDemoTests.release.xcconfig"; sourceTree = "<group>"; };
-		941D878836147B36C4C4C2C1 /* Pods-LittleGPUImageDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleGPUImageDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-LittleGPUImageDemoUITests/Pods-LittleGPUImageDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		98D3AD7B24EA3045B40355BE /* Pods-LittleGPUImageDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleGPUImageDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-LittleGPUImageDemoTests/Pods-LittleGPUImageDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3472763EA7CFEEA42AC3D2E /* Pods_LittleGPUImageDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittleGPUImageDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E7BC82224CB3970079470E /* LittleGPUImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleGPUImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E7BC85224CB3970079470E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				777B61FE9CBF56D0981436D2 /* Pods_LittleGPUImageDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55BAB9E002736A1E9E888E7B /* Pods_LittleGPUImageDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +86,6 @@
 			children = (
 				0217EB69138611F5EFF69BD3 /* Pods-LittleGPUImageDemo.debug.xcconfig */,
 				2310C1D31AC5F3ED2C53963D /* Pods-LittleGPUImageDemo.release.xcconfig */,
-				98D3AD7B24EA3045B40355BE /* Pods-LittleGPUImageDemoTests.debug.xcconfig */,
-				4ADFC1E3D9A02FF753B124C4 /* Pods-LittleGPUImageDemoTests.release.xcconfig */,
-				941D878836147B36C4C4C2C1 /* Pods-LittleGPUImageDemoUITests.debug.xcconfig */,
-				1FE4142541B15D71C3C1E2F0 /* Pods-LittleGPUImageDemoUITests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -177,6 +165,7 @@
 				E7E7BC7E224CB3970079470E /* Sources */,
 				E7E7BC7F224CB3970079470E /* Frameworks */,
 				E7E7BC80224CB3970079470E /* Resources */,
+				B96DB384D18ECDE313080A4C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,7 +180,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7E7BCAD224CB3980079470E /* Build configuration list for PBXNativeTarget "LittleGPUImageDemoTests" */;
 			buildPhases = (
-				EA770AC04DD8D2091B91BA04 /* [CP] Check Pods Manifest.lock */,
 				E7E7BC92224CB3980079470E /* Sources */,
 				E7E7BC93224CB3980079470E /* Frameworks */,
 				E7E7BC94224CB3980079470E /* Resources */,
@@ -210,7 +198,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7E7BCB0224CB3980079470E /* Build configuration list for PBXNativeTarget "LittleGPUImageDemoUITests" */;
 			buildPhases = (
-				4B5B3F8E0728B2799A62253F /* [CP] Check Pods Manifest.lock */,
 				E7E7BC9D224CB3980079470E /* Sources */,
 				E7E7BC9E224CB3980079470E /* Frameworks */,
 				E7E7BC9F224CB3980079470E /* Resources */,
@@ -296,28 +283,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4B5B3F8E0728B2799A62253F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LittleGPUImageDemoUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6CF8C71D22D6FAF7AAE9DA92 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,7 +305,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EA770AC04DD8D2091B91BA04 /* [CP] Check Pods Manifest.lock */ = {
+		B96DB384D18ECDE313080A4C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,18 +313,18 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${PODS_ROOT}/Target Support Files/Pods-LittleGPUImageDemo/Pods-LittleGPUImageDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/EVGPUImage2/EVGPUImage2.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LittleGPUImageDemoTests-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EVGPUImage2.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LittleGPUImageDemo/Pods-LittleGPUImageDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -581,7 +546,6 @@
 		};
 		E7E7BCAE224CB3980079470E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98D3AD7B24EA3045B40355BE /* Pods-LittleGPUImageDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -602,7 +566,6 @@
 		};
 		E7E7BCAF224CB3980079470E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4ADFC1E3D9A02FF753B124C4 /* Pods-LittleGPUImageDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -623,7 +586,6 @@
 		};
 		E7E7BCB1224CB3980079470E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 941D878836147B36C4C4C2C1 /* Pods-LittleGPUImageDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -643,7 +605,6 @@
 		};
 		E7E7BCB2224CB3980079470E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FE4142541B15D71C3C1E2F0 /* Pods-LittleGPUImageDemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

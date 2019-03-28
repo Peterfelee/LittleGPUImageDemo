@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 8907a45d0e57ea257fda71391fa17447f8e8562c
+PODS:
+  - EVGPUImage2 (0.2.0)
+
+DEPENDENCIES:
+  - EVGPUImage2
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - EVGPUImage2
+
+SPEC CHECKSUMS:
+  EVGPUImage2: 1e057f25fbab811b8a9e98d19f96bbd5eb434913
+
+PODFILE CHECKSUM: 6c41ef492f749aebc26880d758cf3ff60f28b5ec
 
 COCOAPODS: 1.6.0.beta.2
