@@ -141,14 +141,18 @@ extension LGFTestViewController:UIImagePickerControllerDelegate,UINavigationCont
     {
         let ciimage = CIImage.init(image: testImage)
         let detectArray = detect.features(in: ciimage!)
-        showView.layer.contents = drawLineWithDetectResult(detectArray: detectArray).cgImage
+        let firstImage = drawLineWithDetectResult(detectArray: detectArray)
+        let path = (Bundle.main.path(forResource: "boy", ofType: nil)! as NSString).appendingPathComponent("face/face1/m_face_0_a@2x.png")
+        let secondImage = UIImage.init(contentsOfFile: path)
+        
+        showView.layer.contents = blendTwoImage(first: firstImage, second: secondImage!).cgImage
     }
 
 }
 
 extension LGFTestViewController{
     
-    //重新绘制一些线框在原图片上，生成新的图片
+    //重新绘制一些线框在原图片上，生成新的图片 获取一张新的图片为截取的脸部部分
     private func drawLineWithDetectResult(detectArray:[CIFeature]?) -> UIImage
     {
         
@@ -161,6 +165,7 @@ extension LGFTestViewController{
         
         let str:NSString = "e" as NSString
         
+        var firstImageFrame:CGRect = .zero
         
         for result:CIFeature in detectArray!
         {
@@ -176,18 +181,41 @@ extension LGFTestViewController{
             str.draw(at: nosePosition, withAttributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
             var tempFrame = temp.bounds
             //根据眼睛和嘴巴的位置粗计算出整个脸的位置
-            tempFrame.origin.y = min(leftPosition.y, rightPosition.y) - tempFrame.height/5
-            let path = UIBezierPath(roundedRect: tempFrame , cornerRadius: 0)
-            path.lineWidth = 2
-            UIColor.red.setStroke()
-            path.stroke()
-            
+            tempFrame.origin.y = min(leftPosition.y, rightPosition.y) - tempFrame.height/3
+//            let path = UIBezierPath(roundedRect: tempFrame , cornerRadius: 0)
+//            path.lineWidth = 2
+//            UIColor.red.setStroke()
+//            path.stroke()
+            firstImageFrame = tempFrame
         }
         
         let tempImage = UIGraphicsGetImageFromCurrentImageContext()
+        let rendImage = tempImage?.cgImage?.cropping(to: firstImageFrame)
+        let finishImage = UIImage(cgImage:rendImage!)
+        
         UIGraphicsEndImageContext()
         
-        return tempImage!
+        
+        return finishImage
     }
+    
+    
+    private func blendTwoImage(first firstImage:UIImage,second secondImage:UIImage) -> UIImage
+    {
+        UIGraphicsBeginImageContext(firstImage.size)
+        firstImage.draw(at: CGPoint(x: 0, y: 0), blendMode: CGBlendMode.normal, alpha: 1.0)
+        secondImage.draw(in: CGRect(x: 0, y: 0, width: firstImage.size.width, height: firstImage.size.height), blendMode: CGBlendMode.destinationIn, alpha: 1.0)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
+    }
+    
+//    private func scaleImageWithDestination(destination destinationImage:UIImage) -> UIImage
+//    {
+//        UIGraphicsBeginImageContext(destinationImage.size)
+//        
+//        
+//    }
 }
 
