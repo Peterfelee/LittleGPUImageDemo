@@ -169,9 +169,11 @@ extension LGFTestViewController{
             let leftPosition = CGPoint(x: temp.leftEyePosition.x, y: testImage.size.height - temp.leftEyePosition.y)
             let rightPosition = CGPoint(x:  temp.rightEyePosition.x, y: testImage.size.height - temp.rightEyePosition.y)
             let mouthPosition = CGPoint(x: temp.mouthPosition.x, y: testImage.size.height - temp.mouthPosition.y)
+            let nosePosition = CGPoint(x: mouthPosition.x, y: leftPosition.y + (mouthPosition.y - leftPosition.y)/2)
             str.draw(at:leftPosition, withAttributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
             str.draw(at: rightPosition, withAttributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
             str.draw(at: mouthPosition, withAttributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
+            str.draw(at: nosePosition, withAttributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
             var tempFrame = temp.bounds
             //根据眼睛和嘴巴的位置粗计算出整个脸的位置
             tempFrame.origin.y = min(leftPosition.y, rightPosition.y) - tempFrame.height/5
