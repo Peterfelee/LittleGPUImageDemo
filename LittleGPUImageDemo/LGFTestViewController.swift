@@ -21,12 +21,20 @@ class LGFTestViewController: UIViewController {
     var temp:PictureInput!
     var output:PictureOutput!
     var dissolve:DissolveBlend = DissolveBlend()
+    
+    var detect:CIDetector!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         title = "滤镜合成效果"
         // Do any additional setup after loading the view.
         addViews()
+        
+        let param:[String:Any] = [CIDetectorAccuracy:CIDetectorAccuracyHigh]
+        let context:CIContext = CIContext(options: nil)
+        detect = CIDetector(ofType: CIDetectorTypeFace, context:context , options: param)
+        
     }
     
     private func addViews()
@@ -38,6 +46,7 @@ class LGFTestViewController: UIViewController {
         backButton.setTitleColor(UIColor.darkGray, for: .normal)
         
         showView = UIView(frame: CGRect(x: 0, y: self.view.frame.height/6.0 , width: self.view.frame.width, height: self.view.frame.height*2/3.0))
+        showView.layer.contentsGravity = CALayerContentsGravity(rawValue: "resizeAspect")
         view.addSubview(showView)
         
         
@@ -54,6 +63,8 @@ class LGFTestViewController: UIViewController {
         
         let sel = #selector(nextButtonClick)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "next", style: .plain, target: self, action: sel)
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "detect", style: .plain, target: self, action: #selector(detectButtonClick))
         
     }
     override func viewWillLayoutSubviews() {
@@ -125,5 +136,56 @@ extension LGFTestViewController:UIImagePickerControllerDelegate,UINavigationCont
     {
         self.navigationController?.pushViewController(LGFCaremViewController(), animated: true)
     }
+    
+    @objc private func detectButtonClick()
+    {
+        let ciimage = CIImage.init(image: testImage)
+        let detectArray = detect.features(in: ciimage!)
+        showView.layer.contents = drawLineWithDetectResult(detectArray: detectArray).cgImage
+    }
 
 }
+
+extension LGFTestViewController{
+    
+    //重新绘制一些线框在原图片上，生成新的图片
+    private func drawLineWithDetectResult(detectArray:[CIFeature]?) -> UIImage
+    {
+        
+        guard detectArray != nil else {
+            return testImage
+        }
+        
+        UIGraphicsBeginImageContext(testImage.size)
+        testImage.draw(at: CGPoint(x: 0, y: 0))
+        
+        let str:NSString = "e" as NSString
+        
+        
+        for result:CIFeature in detectArray!
+        {
+            let temp = result as! CIFaceFeature
+             //反过来绘制
+            let leftPosition = CGPoint(x: temp.leftEyePosition.x, y: testImage.size.height - temp.leftEyePosition.y)
+            let rightPosition = CGPoint(x:  temp.rightEyePosition.x, y: testImage.size.height - temp.rightEyePosition.y)
+            let mouthPosition = CGPoint(x: temp.mouthPosition.x, y: testImage.size.height - temp.mouthPosition.y)
+            str.draw(at:leftPosition, withAttributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
+            str.draw(at: rightPosition, withAttributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
+            str.draw(at: mouthPosition, withAttributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
+            var tempFrame = temp.bounds
+            //根据眼睛和嘴巴的位置粗计算出整个脸的位置
+            tempFrame.origin.y = min(leftPosition.y, rightPosition.y) - tempFrame.height/5
+            let path = UIBezierPath(roundedRect: tempFrame , cornerRadius: 0)
+            path.lineWidth = 2
+            UIColor.red.setStroke()
+            path.stroke()
+            
+        }
+        
+        let tempImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return tempImage!
+    }
+}
+
