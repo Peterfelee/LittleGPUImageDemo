@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A5AFB5A7CA908BE5E2EA1917 /* Pods_LittleGPUImageDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3472763EA7CFEEA42AC3D2E /* Pods_LittleGPUImageDemo.framework */; };
+		E776EE252251BC4E00895EF0 /* UIKit + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776EE242251BC4E00895EF0 /* UIKit + Extension.swift */; };
+		E776EE272251BD7200895EF0 /* LGFHudHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776EE262251BD7200895EF0 /* LGFHudHelper.swift */; };
+		E776EE292251BE0400895EF0 /* NSObject + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776EE282251BE0400895EF0 /* NSObject + Extension.swift */; };
+		E776EE2B2251C41A00895EF0 /* LGFScaleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E776EE2A2251C41A00895EF0 /* LGFScaleImageViewController.swift */; };
 		E7E69161224E21F7005976D6 /* girl in Resources */ = {isa = PBXBuildFile; fileRef = E7E6915F224E21F7005976D6 /* girl */; };
 		E7E69162224E21F7005976D6 /* boy in Resources */ = {isa = PBXBuildFile; fileRef = E7E69160224E21F7005976D6 /* boy */; };
 		E7E7BC86224CB3970079470E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7BC85224CB3970079470E /* AppDelegate.swift */; };
@@ -79,6 +83,10 @@
 		2310C1D31AC5F3ED2C53963D /* Pods-LittleGPUImageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittleGPUImageDemo.release.xcconfig"; path = "Target Support Files/Pods-LittleGPUImageDemo/Pods-LittleGPUImageDemo.release.xcconfig"; sourceTree = "<group>"; };
 		2FC489679126F468E2A502FB /* Pods_LittleGPUImageDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittleGPUImageDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3472763EA7CFEEA42AC3D2E /* Pods_LittleGPUImageDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittleGPUImageDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E776EE242251BC4E00895EF0 /* UIKit + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit + Extension.swift"; sourceTree = "<group>"; };
+		E776EE262251BD7200895EF0 /* LGFHudHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGFHudHelper.swift; sourceTree = "<group>"; };
+		E776EE282251BE0400895EF0 /* NSObject + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + Extension.swift"; sourceTree = "<group>"; };
+		E776EE2A2251C41A00895EF0 /* LGFScaleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LGFScaleImageViewController.swift; sourceTree = "<group>"; };
 		E7E6915F224E21F7005976D6 /* girl */ = {isa = PBXFileReference; lastKnownFileType = folder; path = girl; sourceTree = "<group>"; };
 		E7E69160224E21F7005976D6 /* boy */ = {isa = PBXFileReference; lastKnownFileType = folder; path = boy; sourceTree = "<group>"; };
 		E7E7BC82224CB3970079470E /* LittleGPUImageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleGPUImageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +186,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E776EE232251B5D600895EF0 /* Uitils */ = {
+			isa = PBXGroup;
+			children = (
+				E776EE242251BC4E00895EF0 /* UIKit + Extension.swift */,
+				E776EE262251BD7200895EF0 /* LGFHudHelper.swift */,
+				E776EE282251BE0400895EF0 /* NSObject + Extension.swift */,
+			);
+			path = Uitils;
+			sourceTree = "<group>";
+		};
 		E7E6915E224E21B8005976D6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,12 +230,14 @@
 		E7E7BC84224CB3970079470E /* LittleGPUImageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E776EE232251B5D600895EF0 /* Uitils */,
 				E7E6915E224E21B8005976D6 /* Resources */,
 				E7E7BC85224CB3970079470E /* AppDelegate.swift */,
 				E7E7BC87224CB3970079470E /* LGFViewController.swift */,
 				E7E7BCB3224CBB2B0079470E /* LGFNavgationViewController.swift */,
 				E7E7BCB5224CBB520079470E /* LGFTestViewController.swift */,
 				E7E7BCFE224CC8A20079470E /* LGFCaremViewController.swift */,
+				E776EE2A2251C41A00895EF0 /* LGFScaleImageViewController.swift */,
 				E7E7BC8C224CB3980079470E /* Assets.xcassets */,
 				E7E7BCBB224CC0340079470E /* Colors */,
 				E7E7BC8E224CB3980079470E /* LaunchScreen.storyboard */,
@@ -483,12 +503,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LittleGPUImageDemo/Pods-LittleGPUImageDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/EVGPUImage2/EVGPUImage2.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EVGPUImage2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -503,8 +525,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7E7BC88224CB3970079470E /* LGFViewController.swift in Sources */,
+				E776EE272251BD7200895EF0 /* LGFHudHelper.swift in Sources */,
 				E7E7BCFF224CC8A20079470E /* LGFCaremViewController.swift in Sources */,
+				E776EE252251BC4E00895EF0 /* UIKit + Extension.swift in Sources */,
 				E7E7BCB4224CBB2B0079470E /* LGFNavgationViewController.swift in Sources */,
+				E776EE292251BE0400895EF0 /* NSObject + Extension.swift in Sources */,
+				E776EE2B2251C41A00895EF0 /* LGFScaleImageViewController.swift in Sources */,
 				E7E7BCB6224CBB520079470E /* LGFTestViewController.swift in Sources */,
 				E7E7BC86224CB3970079470E /* AppDelegate.swift in Sources */,
 			);

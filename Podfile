@@ -7,5 +7,5 @@ target 'LittleGPUImageDemo' do
 
   # Pods for LittleGPUImageDemo
   pod 'EVGPUImage2'
-
+  pod 'MBProgressHUD'
 end
