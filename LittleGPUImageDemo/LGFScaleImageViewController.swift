@@ -8,6 +8,8 @@
 
 import UIKit
 import EVGPUImage2
+import CoreGraphics
+
 
 class LGFScaleImageViewController: UIViewController {
     
@@ -94,7 +96,7 @@ extension LGFScaleImageViewController:UIImagePickerControllerDelegate,UINavigati
             DispatchQueue.main.async {
                 if let image = info[UIImagePickerController.InfoKey.originalImage]
                 {
-                    self?.testImage = image as! UIImage
+                    self?.testImage = (self?.fixOriention(image: image as! UIImage))!
                     self?.processImage()
                 }
             }
@@ -130,7 +132,6 @@ extension LGFScaleImageViewController{
         guard detectArray != nil else {
             return testImage
         }
-        
         UIGraphicsBeginImageContext(testImage.size)
         testImage.draw(at: CGPoint(x: 0, y: 0))
         
@@ -188,4 +189,13 @@ extension LGFScaleImageViewController{
     //
     //
     //    }
+    //纠正图片方向的问题
+    private func fixOriention(image:UIImage) -> UIImage
+    {
+        UIGraphicsBeginImageContext(image.size)
+        image.draw(at: CGPoint.zero)
+        let temp = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return temp!
+    }
 }
