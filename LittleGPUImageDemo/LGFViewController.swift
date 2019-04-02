@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import EVGPUImage2
+import GPUImage
 
 class LGFViewController: UIViewController {
     
@@ -20,10 +20,8 @@ class LGFViewController: UIViewController {
     var pickerImageViewController:UIImagePickerController!
     
     var dissove:DissolveBlend!
-    var bilateralblur:BilateralBlur!
     var grammaAdjust:GammaAdjustment!
     var staturation:SaturationAdjustment!
-    var sharpen:Sharpen!
     var lookupFilter:LookupFilter!
     
     
@@ -39,7 +37,7 @@ class LGFViewController: UIViewController {
         var frame = view.frame
         frame.size.height = frame.height - 100
         renderView.frame = frame
-        renderView.backgroundRenderColor = Color.white
+        renderView.backgroundColor = UIColor.white
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapClick))
         renderView.addGestureRecognizer(tap)
         view.addSubview(renderView)
@@ -76,16 +74,14 @@ class LGFViewController: UIViewController {
         
         //        filter = SaturationAdjustment()
         dissove = DissolveBlend()
-        bilateralblur = BilateralBlur()
         grammaAdjust = GammaAdjustment()
         staturation = SaturationAdjustment()
-        sharpen = Sharpen()
         lookupFilter = LookupFilter()
         
         let imagePath = Bundle.main.path(forResource: "crisp_20170520", ofType: "png")
         lookupFilter.lookupImage = PictureInput(image: UIImage(contentsOfFile: imagePath!)!)
         
-        picture --> /*dissove -->*/ lookupFilter --> /*bilateralblur --> grammaAdjust --> staturation --> sharpen -->*/ renderView
+        picture --> /*dissove -->*/ lookupFilter as! ImageSource --> /*bilateralblur --> grammaAdjust --> staturation --> sharpen -->*/ renderView
         picture.processImage(synchronously: true)
     }
 }
@@ -124,7 +120,7 @@ extension LGFViewController:UICollectionViewDelegate,UICollectionViewDataSource{
         renderView.removeSourceAtIndex(0)
         let imagePath = Bundle.main.path(forResource: imageNames[indexPath.row], ofType: "png")
         lookupFilter.lookupImage = PictureInput(image: UIImage(contentsOfFile: imagePath!)!)
-        lookupFilter --> renderView
+        lookupFilter as! ImageSource --> renderView
         picture.processImage(synchronously: true)
     }
     
@@ -158,7 +154,7 @@ extension LGFViewController:UIImagePickerControllerDelegate,UINavigationControll
             picture.removeAllTargets()
             renderView.removeSourceAtIndex(0)
             picture = PictureInput(image: image as! UIImage)
-            picture --> lookupFilter --> renderView
+            picture --> lookupFilter as! ImageSource --> renderView
             picture.processImage()
         }
         picker.dismiss(animated: true, completion: nil)

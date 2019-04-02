@@ -7,17 +7,21 @@
 //
 
 import UIKit
-import EVGPUImage2
 import CoreGraphics
-
+//import GPUImage
+import GPUImage
 
 class LGFScaleImageViewController: UIViewController {
     
     private var backButton:UIButton!
     private var showView:UIImageView!
     private var testImage:UIImage = UIImage(named: "WID-small.jpg")!
-    
+//    var bliater:ZoomBlur BilateralBlur!
     var detect:CIDetector!
+    var pictureInput:PictureInput!
+    var pictureOutput:PictureOutput!
+    var brightess:BrightnessAdjustment!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,8 +72,28 @@ class LGFScaleImageViewController: UIViewController {
     
     private func processImage()
     {
-        showView.image = testImage
-//        showView.layer.contents = testImage.cgImage
+        if pictureInput != nil
+        {
+            pictureInput.removeAllTargets()
+            pictureOutput.removeSourceAtIndex(0)
+        }
+        pictureInput = PictureInput(image: testImage)
+        pictureOutput = PictureOutput()
+//        bliater = BilateralBlur()
+//        bliater.distanceNormalizationFactor = 1.5
+        
+        brightess = BrightnessAdjustment()
+        brightess.brightness = 0.2
+        
+        pictureInput --> brightess --> pictureOutput
+        pictureInput.processImage()
+        
+        pictureOutput.imageAvailableCallback = {[weak self](image) in
+            DispatchQueue.main.async {
+                self?.showView.image = image
+            }
+        }
+        
     }
     
     @objc private func backButtonClick(button:UIButton)
@@ -164,6 +188,9 @@ extension LGFScaleImageViewController{
         
         let tempImage = UIGraphicsGetImageFromCurrentImageContext()
         let rendImage = tempImage?.cgImage?.cropping(to: firstImageFrame)
+        guard rendImage != nil else {
+            return tempImage!
+        }
         let finishImage = UIImage(cgImage:rendImage!)
         
         UIGraphicsEndImageContext()

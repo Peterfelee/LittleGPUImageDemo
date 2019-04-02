@@ -8,7 +8,7 @@
 
 import UIKit
 
-import EVGPUImage2
+import GPUImage
 import AVFoundation
 
 
@@ -19,7 +19,6 @@ class LGFCaremViewController: UIViewController {
     var cameraView:Camera!
     
     var filter:ToonFilter = ToonFilter()
-    var barlim:BilateralBlur = BilateralBlur()
     var soft:SepiaToneFilter = SepiaToneFilter()
     var renderView:RenderView = RenderView()
     
@@ -38,7 +37,7 @@ class LGFCaremViewController: UIViewController {
         renderView.frame  = view.bounds
         view.addSubview(renderView)
         cameraView = try? Camera.init(sessionPreset: AVCaptureSession.Preset.low, cameraDevice: nil, location: PhysicalCameraLocation.frontFacing, captureAsYUV: true)
-        cameraView --> soft --> renderView
+        cameraView --> soft as! ImageSource --> renderView
         
         cameraView.startCapture()
         cameraView.delegate = self

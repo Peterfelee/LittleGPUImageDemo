@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import EVGPUImage2
+import GPUImage
 
 class LGFTestViewController: UIViewController {
     
@@ -91,7 +91,12 @@ class LGFTestViewController: UIViewController {
     {
         temp.processImage(synchronously: false)
         input.processImage(synchronously: false)
-        showView.layer.contents = output.synchronousImageCapture().cgImage
+        output.imageAvailableCallback = {[weak self] (image) in
+            DispatchQueue.main.async {
+               self?.showView.layer.contents = image.cgImage
+            }
+        }
+//        showView.layer.contents = output. output.synchronousImageCapture().cgImage
     }
     
     @objc private func backButtonClick(button:UIButton)

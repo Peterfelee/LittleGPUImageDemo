@@ -10,61 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LittleGPUImageDemo/LGFCaremViewController.swift"
-            timestampString = "575784644.282187"
+            timestampString = "575882509.706041"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "swtichCamera()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LittleGPUImageDemo/LGFScaleImageViewController.swift"
-            timestampString = "575867651.060847"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in LittleGPUImageDemo.LGFScaleImageViewController.imagePickerController(_: __C.UIImagePickerController, didFinishPickingMediaWithInfo: Swift.Dictionary&lt;__C.UIImagePickerControllerInfoKey, Any&gt;) -&gt; ()"
-                  moduleName = "LittleGPUImageDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/peterlee/Desktop/Demo/LittleGPUImageDemo/LittleGPUImageDemo/LGFScaleImageViewController.swift"
-                  timestampString = "575815379.5679229"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "240">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in LittleGPUImageDemo.LGFScaleImageViewController.imagePickerController(_: __C.UIImagePickerController, didFinishPickingMediaWithInfo: Swift.Dictionary&lt;__C.UIImagePickerControllerInfoKey, Any&gt;) -&gt; ()"
-                  moduleName = "LittleGPUImageDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/peterlee/Desktop/Demo/LittleGPUImageDemo/LittleGPUImageDemo/LGFScaleImageViewController.swift"
-                  timestampString = "575815379.5696729"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "848">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -6,6 +6,6 @@ target 'LittleGPUImageDemo' do
   use_frameworks!
 
   # Pods for LittleGPUImageDemo
-  pod 'EVGPUImage2'
+#  pod 'EVGPUImage2'
   pod 'MBProgressHUD'
 end
