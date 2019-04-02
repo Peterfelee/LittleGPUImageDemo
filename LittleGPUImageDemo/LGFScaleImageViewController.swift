@@ -118,7 +118,6 @@ extension LGFScaleImageViewController:UIImagePickerControllerDelegate,UINavigati
         let secondImage = UIImage.init(contentsOfFile: path)
         showView.image = blendTwoImage(first: firstImage, second: secondImage!)
         
-//        showView.layer.contents = blendTwoImage(first: firstImage, second: secondImage!).cgImage
     }
     
 }
@@ -153,12 +152,14 @@ extension LGFScaleImageViewController{
             str.draw(at: nosePosition, withAttributes: [NSAttributedString.Key.foregroundColor:UIColor.red])
             var tempFrame = temp.bounds
             //根据眼睛和嘴巴的位置粗计算出整个脸的位置
-            tempFrame.origin.y = min(leftPosition.y, rightPosition.y) - tempFrame.height/3
-            //            let path = UIBezierPath(roundedRect: tempFrame , cornerRadius: 0)
-            //            path.lineWidth = 2
-            //            UIColor.red.setStroke()
-            //            path.stroke()
+            tempFrame.origin.y = min(leftPosition.y, rightPosition.y) - tempFrame.height/4
             firstImageFrame = tempFrame
+            
+            //绘制需要的纹理到当前的画板上
+            let image = UIImage(named: "t_button")
+            
+            image?.draw(in: CGRect(x: leftPosition.x - tempFrame.width/6 , y: leftPosition.y + 50, width: tempFrame.width/3, height: tempFrame.height/3))
+            
         }
         
         let tempImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -171,7 +172,7 @@ extension LGFScaleImageViewController{
         return finishImage
     }
     
-    
+    //根据抠出的脸进行比对模板切脸
     private func blendTwoImage(first firstImage:UIImage,second secondImage:UIImage) -> UIImage
     {
         UIGraphicsBeginImageContext(firstImage.size)
@@ -183,12 +184,6 @@ extension LGFScaleImageViewController{
         return image!
     }
     
-    //    private func scaleImageWithDestination(destination destinationImage:UIImage) -> UIImage
-    //    {
-    //        UIGraphicsBeginImageContext(destinationImage.size)
-    //
-    //
-    //    }
     //纠正图片方向的问题
     private func fixOriention(image:UIImage) -> UIImage
     {
